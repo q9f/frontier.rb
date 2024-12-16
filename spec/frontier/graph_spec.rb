@@ -112,5 +112,41 @@ describe Graph do
       expect(path["path"]).to eq ["a", "f", "e", "b"]
       expect(path["source"]).to eq "a"
     end
+
+    it "is dijkstra algorithm works with frontier systems #shortest_path" do
+      graph = Graph.new
+      graph.add_edge("D:S299", "P:S696", 723.3487563)
+      graph.add_edge("D:S299", "A 2560", 14.345793)
+      graph.add_edge("D:S299", "E.2HM.2RR", 9.39459783)
+      graph.add_edge("P:S696", "I.EXP.NJ7", 1534.2048745)
+      graph.add_edge("P:S696", "E.2HM.2RR", 210)
+      graph.add_edge("I.EXP.NJ7", "E.2HM.2RR", 411.3489576)
+      graph.add_edge("I.EXP.NJ7", "G.QXJ.4SH", 6.349587)
+      graph.add_edge("E.2HM.2RR", "A 2560", 2)
+      graph.add_edge("A 2560", "G.QXJ.4SH", 0.009)
+      path = graph.shortest_path("D:S299", "G.QXJ.4SH")
+      expect(path["dest"]).to eq "G.QXJ.4SH"
+      expect(path["dist"]).to eq 11.40359783
+      expect(path["path"]).to eq ["D:S299", "E.2HM.2RR", "A 2560", "G.QXJ.4SH"]
+      expect(path["source"]).to eq "D:S299"
+    end
+
+    it "is dijkstra algorithm works without route #shortest_path" do
+      graph = Graph.new
+      graph.add_edge("D:S299", "P:S696", 723.3487563)
+      graph.add_edge("D:S299", "A 2560", 14.345793)
+      graph.add_edge("P:S696", "I.EXP.NJ7", 1534.2048745)
+      graph.add_edge("P:S696", "E.2HM.2RR", 210)
+      graph.add_edge("I.EXP.NJ7", "E.2HM.2RR", 411.3489576)
+      graph.add_edge("I.EXP.NJ7", "G.QXJ.4SH", 6.349587)
+      graph.add_edge("A 2560", "G.QXJ.4SH", 0.009)
+      graph.add_edge("Innocence", "ORT-D19", 9.39459783)
+      graph.add_edge("V-016", "Innocence", 2)
+      path = graph.shortest_path("D:S299", "Innocence")
+      expect(path["dest"]).to eq "Innocence"
+      expect(path["dist"]).to eq -999
+      expect(path["path"]).to eq ["no path"]
+      expect(path["source"]).to eq "D:S299"
+    end
   end
 end

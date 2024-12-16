@@ -90,14 +90,16 @@ module Frontier
           break
         end
         queue.delete(u)
-        graph[u].keys.each do |vertex|
-          alt = @distance[u] + graph[u][vertex]
-          if (alt < @distance[vertex])
+        unless @graph[u].keys.nil? # edge case: no vertices
+          @graph[u].keys.each do |vertex|
+            alt = @distance[u] + graph[u][vertex]
+            if (alt < @distance[vertex])
 
-            # A shorter path to v has been found
-            @distance[vertex] = alt
-            @previous[vertex] = u
-            queue << vertex
+              # A shorter path to v has been found
+              @distance[vertex] = alt
+              @previous[vertex] = u
+              queue << vertex
+            end
           end
         end
       end
@@ -142,7 +144,8 @@ module Frontier
       actual_distance = if @distance[dest] != INFINITY
           @distance[dest]
         else
-          "no path"
+          @path = ["no path"]
+          -999
         end
       path = {
                "source" => source,
