@@ -3,6 +3,9 @@ Library to handle EVE Frontier graph and pathfinding operations.
 
 _Work in progress._
 
+Limitations:
+- no graph database implemented (TODO), i.e., you have to rebuild the graph each time you run computations which takes some time
+- path finding on 24k star systems can hit the limits of Ruby (SystemStackError: stack level too deep), try running shorter queries over less distance and combine the results
 
 ## Installation
 The gem is not published yet, but yuo can install it locally:
@@ -25,13 +28,23 @@ include Frontier
 ```
 
 ### Shortest path between two star systems
-Get the shortest path between `E.2HM.2RR` and `I.EXP.NJ7`.
+Get the shortest path between `D:S299` and `Y:1SII`.
 
 ```ruby
-best_smart_gate_path = UNIVERSE_GRAPH.shortest_path("E.2HM.2RR", "I.EXP.NJ7")
+best_smart_gate_path = UNIVERSE_GRAPH.shortest_path("D:S299", "Y:1SII")
 ```
 
 See [examples/distance.rb](./examples/distance.rb) for an example and options to fine-tune.
+
+```ruby
+❯ ruby examples/distance.rb
+Mapping all star systems ...    done.
+Building universe graph ...    done.
+{"source"=>"D:S299",
+ "dest"=>"Y:1SII",
+ "path"=>["D:S299", "G.QXJ.4SH", "P:S696", "Q:1A97", "J:3K85", "Y:1SII"],
+ "dist"=>1978.63507044974}
+```
 
 ## Testing
 To run tests, simply use `rspec`.
