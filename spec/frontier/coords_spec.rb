@@ -7,7 +7,7 @@ describe Coords do
   subject(:stars_phase5) { JSON.parse stars_phase5_file }
 
   it "can map basic coordinates" do
-    base = Coords.new(0,0,0)
+    base = Coords.new(0, 0, 0)
     expect(base.x).to eq 0
     expect(base.y).to eq 0
     expect(base.z).to eq 0

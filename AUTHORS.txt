@@ -1,0 +1,7 @@
+The Frontier gem has been written and bundled by Afri Schoedon (q9f).
+
+It contains Dijkstra code derived from Jithin (jithinabraham) and Patrick Reynolds (piki).
+- https://gist.github.com/piki/dc6a3ee8eb90be0f5c61dd972988094f
+
+It contains the closed alpha solar system mappig by Michael (blurpesec).
+- https://gist.github.com/blurpesec/36a86540781e0d00f539067497e972db

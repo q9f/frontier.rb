@@ -9,7 +9,7 @@ describe Star do
   subject(:mapping_closed_alpha) { JSON.parse mapping_closed_alpha_file }
 
   it "can create a generic star system" do
-    loc = Coords.new(0,0,0)
+    loc = Coords.new(0, 0, 0)
     sun = Star.new(1, "Sun", loc)
     expect(sun.id).to eq 1
     expect(sun.name).to eq "Sun"
@@ -34,7 +34,7 @@ describe Star do
   end
 
   it "can compute distance between two stars" do
-    loc = Coords.new(0,0,0)
+    loc = Coords.new(0, 0, 0)
     sun = Star.new(1, "Sun", loc)
 
     id = "30000001"
