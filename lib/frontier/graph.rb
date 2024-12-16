@@ -90,8 +90,8 @@ module Frontier
           break
         end
         queue.delete(u)
-        unless @graph[u].keys.nil? # edge case: no vertices
-          @graph[u].keys.each do |vertex|
+        unless graph[u].nil? # edge case: no vertices
+          graph[u].keys.each do |vertex|
             alt = @distance[u] + graph[u][vertex]
             if (alt < @distance[vertex])
 
