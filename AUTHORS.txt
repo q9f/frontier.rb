@@ -5,3 +5,7 @@ It contains Dijkstra code derived from Jithin (jithinabraham) and Patrick Reynol
 
 It contains the closed alpha solar system mappig by Michael (blurpesec).
 - https://gist.github.com/blurpesec/36a86540781e0d00f539067497e972db
+
+It contains publicly available EVE Frontier Swagger API data for the test suite
+which is subject to CCP Games' terms and conditions.
+- https://docs.evefrontier.com/SwaggerWorldApi
