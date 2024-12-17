@@ -34,10 +34,15 @@ Get the shortest path between `D:S299` and `Y:1SII`.
 best_smart_gate_path = UNIVERSE_GRAPH.shortest_path("D:S299", "Y:1SII")
 ```
 
-See [examples/distance.rb](./examples/distance.rb) for an example and options to fine-tune.
+See [examples/](./examples/) for usage and options to fine-tune.
 
 ```ruby
-❯ ruby examples/distance.rb
+❯ ruby examples/distance.rb "D:S299" "Y:1SII"
+1974.926982542737
+```
+
+```ruby
+❯ ruby examples/pathfinder.rb
 Mapping all star systems ...    done.
 Building universe graph ...    done.
 {"source"=>"D:S299",
