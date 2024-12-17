@@ -41,7 +41,7 @@ if __FILE__ == $0
     c_id += 1
     prog += 1
     perc = prog.to_f / ALL_STARS.length.to_f * 100.0
-    print "Mapping all star systems ... #{'%3.2f' % perc}%\r"
+    print "Mapping all star systems ... #{"%3.2f" % perc}%\r"
   end
   print "Mapping all star systems ...    done.\n"
 
@@ -56,7 +56,7 @@ if __FILE__ == $0
       end
       prog += 1
       perc = prog.to_f / (ALL_STARS.length.to_f * ALL_STARS.length.to_f) * 100.0
-      print "Building universe graph ... #{'%3.2f' % perc}%\r"
+      print "Building universe graph ... #{"%3.2f" % perc}%\r"
     end
   end
   print "Building universe graph ...    done.\n"
