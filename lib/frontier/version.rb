@@ -22,7 +22,7 @@ module Frontier
   MINOR = 0.freeze
 
   # Defines the patch version of the {Frontier} module.
-  PATCH = 1.freeze
+  PATCH = 2.freeze
 
   # Defines the version string of the {Frontier} module.
   VERSION = [MAJOR, MINOR, PATCH].join(".").freeze
