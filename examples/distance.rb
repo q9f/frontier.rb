@@ -37,7 +37,7 @@ if __FILE__ == $0
     c_id += 1
   end
 
-  # Distance between "D:S299" to "Y:1SII"
-  distance = ALL_STARS["D:S299"].distance_ly(ALL_STARS["Y:1SII"])
-  pp distance
+  # Direct distance between "D:S299" to "Y:1SII"
+  direct_distance = ALL_STARS["D:S299"].distance_ly(ALL_STARS["Y:1SII"])
+  pp direct_distance
 end
