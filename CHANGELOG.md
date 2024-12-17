@@ -1,6 +1,6 @@
 ### Frontier.rb v0.0.2
 
-- Gem: bump version to 0.0.2 ([#3](https://github.com/q9f/frontier.rb/pull/3))
+- Gem: bump version to 0.0.2 ([#4](https://github.com/q9f/frontier.rb/pull/4))
 
 ### Frontier.rb v0.0.1
 
