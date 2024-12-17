@@ -1,6 +1,7 @@
 ### Frontier.rb v0.0.1
 
-- Ci: enable github actions (#1)
+- Docs: add changelog ([#2](https://github.com/q9f/frontier.rb/pulls/2))
+- Ci: enable github actions ([#1](https://github.com/q9f/frontier.rb/pulls/1))
 - Examples: add distance script
 - Examples: add progress tracking
 - Docs: clarify limitations
