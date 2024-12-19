@@ -1,5 +1,11 @@
 #!/usr/bin/env ruby
 
+# USAGE
+# ruby examples/pathfinder.rb "D:S299" "Y:1SII"
+#   Mapping all star systems ...    done.
+#   Building universe graph ...    done.
+#   D:S299 --> Y:1SII: 885.623 ly(D:S299 --> G.QXJ.4SH --> P:S696 --> Q:1A97 --> J:3K85 --> Y:1SII)
+
 # use the local version of the code instead of a globally installed gem
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 

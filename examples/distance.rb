@@ -2,7 +2,7 @@
 
 # USAGE
 # ruby examples/distance.rb "D:S299" "Y:1SII"
-# "D:S299 --> Y:1SII: 885.623 ly"
+#   D:S299 --> Y:1SII: 885.623 ly
 
 # use the local version of the code instead of a globally installed gem
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
