@@ -26,3 +26,6 @@ jobs:
     - name: Run Tests
       run: |
         bundle exec rspec
+        bundle exec rspec
+    - run: |
+        ruby ./examples/distance.rb "D:S299" "Y:1SII"
