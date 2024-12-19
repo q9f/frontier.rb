@@ -3,7 +3,10 @@ Library to handle EVE Frontier graph and pathfinding operations.
 
 _Work in progress._
 
+API Version: `Phase 5`
+
 Limitations:
+- no closed alpha ("phase 6") data yet
 - no graph database implemented (TODO), i.e., you have to rebuild the graph each time you run computations which takes some time
 - path finding on 24k star systems can hit the limits of Ruby (SystemStackError: stack level too deep), try running shorter queries over less distance and combine the results
 
