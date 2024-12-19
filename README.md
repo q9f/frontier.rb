@@ -1,12 +1,12 @@
 # Frontier.rb
 Library to handle EVE Frontier graph and pathfinding operations.
 
+API Version: `Phase 6` (Closed Alpha)
+
 _Work in progress._
 
-API Version: `Phase 5`
-
 Limitations:
-- no closed alpha ("phase 6") data yet
+- ~~no closed alpha ("phase 6") data yet~~
 - no graph database implemented (TODO), i.e., you have to rebuild the graph each time you run computations which takes some time
 - path finding on 24k star systems can hit the limits of Ruby (SystemStackError: stack level too deep), try running shorter queries over less distance and combine the results
 
@@ -41,7 +41,7 @@ See [examples/](./examples/) for usage and options to fine-tune.
 
 ```bash
 ❯ ruby examples/distance.rb "D:S299" "Y:1SII"
-1974.926982542737
+  D:S299 --> Y:1SII: 885.623 ly
 ```
 
 ### Shortest jump-path between two star systems
@@ -54,13 +54,10 @@ best_smart_gate_path = UNIVERSE_GRAPH.shortest_path("D:S299", "Y:1SII")
 See [examples/](./examples/) for usage and options to fine-tune.
 
 ```bash
-❯ ruby examples/pathfinder.rb
-Mapping all star systems ...    done.
-Building universe graph ...    done.
-{"source"=>"D:S299",
- "dest"=>"Y:1SII",
- "path"=>["D:S299", "G.QXJ.4SH", "P:S696", "Q:1A97", "J:3K85", "Y:1SII"],
- "dist"=>1978.63507044974}
+❯ ruby examples/pathfinder.rb "D:S299" "Y:1SII"
+  Mapping all star systems ...    done.
+  Building universe graph ...    done.
+  D:S299 --> Y:1SII: 885.623 ly(D:S299 --> G.QXJ.4SH --> P:S696 --> Q:1A97 --> J:3K85 --> Y:1SII)
 ```
 
 ### Frontier console
