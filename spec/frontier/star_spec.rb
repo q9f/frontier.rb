@@ -3,11 +3,11 @@
 require "spec_helper"
 
 describe Star do
-  let(:stars_phase5_file) { File.read "spec/fixtures/stars_phase5.json" }
+  let(:stars_phase5_file) { File.read "./fixtures/stars_phase5.json" }
   subject(:stars_phase5) { JSON.parse stars_phase5_file }
-  let(:stars_closed_alpha_file) { File.read "spec/fixtures/stars_closed_alpha.json" }
+  let(:stars_closed_alpha_file) { File.read "./fixtures/stars_closed_alpha.json" }
   subject(:stars_closed_alpha) { JSON.parse stars_closed_alpha_file }
-  let(:mapping_closed_alpha_file) { File.read "spec/fixtures/mapping_closed_alpha.json" }
+  let(:mapping_closed_alpha_file) { File.read "./fixtures/mapping_closed_alpha.json" }
   subject(:mapping_closed_alpha) { JSON.parse mapping_closed_alpha_file }
 
   it "can create a generic star system" do

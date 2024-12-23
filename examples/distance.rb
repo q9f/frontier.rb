@@ -18,7 +18,7 @@ if __FILE__ == $0
   ALL_STARS = {}
 
   # Read star data (locally or from API)
-  stars_closed_alpha = File.read "./spec/fixtures/stars_closed_alpha.json"
+  stars_closed_alpha = File.read "./fixtures/stars_closed_alpha.json"
   stars_closed_alpha = JSON.parse stars_closed_alpha
 
   # Create all star system objects with coordinates
