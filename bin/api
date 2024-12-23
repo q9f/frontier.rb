@@ -2,7 +2,7 @@
 
 
 # Update available star systems from swagger API (Phase 5)
-### curl https://blockchain-gateway-stillness.live.tech.evefrontier.com/solarsystems -o ./spec/fixtures/stars_phase5.json
+### curl https://blockchain-gateway-stillness.live.tech.evefrontier.com/solarsystems -o ./fixtures/stars_phase5.json
 
 # Update available star systems from swagger API (Phase 6)
-curl https://blockchain-gateway-nova.nursery.reitnorf.com/solarsystems -o ./spec/fixtures/stars_closed_alpha.json
+curl https://blockchain-gateway-nova.nursery.reitnorf.com/solarsystems -o ./fixtures/stars_closed_alpha.json

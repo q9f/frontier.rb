@@ -3,7 +3,7 @@
 require "spec_helper"
 
 describe Coords do
-  let(:stars_phase5_file) { File.read "spec/fixtures/stars_phase5.json" }
+  let(:stars_phase5_file) { File.read "./fixtures/stars_phase5.json" }
   subject(:stars_phase5) { JSON.parse stars_phase5_file }
 
   it "can map basic coordinates" do
