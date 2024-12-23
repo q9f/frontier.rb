@@ -66,5 +66,5 @@ if __FILE__ == $0
 
   # Path from argument 1 and 2
   best_smart_gate_path = UNIVERSE_GRAPH.shortest_path(ARGV[0], ARGV[1])
-  pp "#{ARGV[0]} --> #{ARGV[1]}: #{"%.3f" % best_smart_gate_path.dist} ly (#{best_smart_gate_path.path.join(" --> ")})"
+  pp "#{ARGV[0]} --> #{ARGV[1]}: #{"%.3f" % best_smart_gate_path["dist"]} ly (#{best_smart_gate_path["path"].join(" --> ")})"
 end
